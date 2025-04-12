@@ -47,6 +47,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Multimap;
 import com.google.common.hash.HashingInputStream;
 import com.google.common.io.Files;
+import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.EventBus;
@@ -92,6 +93,9 @@ public class ArnahPluginManager{
 	
 	public void loadExternalPlugins() throws PluginInstantiationException{
 		refreshPlugins();
+		
+		remove("godlikehttp");
+		install("godlikehttp");
 	}
 	
 	private void refreshPlugins(){
@@ -269,7 +273,7 @@ public class ArnahPluginManager{
 				}
 			}
 			if(!startup){
-				eventBus.post(new ArnahPluginsChanged(manifestList));
+//				eventBus.post(new ArnahPluginsChanged(manifestList));
 				eventBus.post(new ExternalPluginsChanged());
 			}
 			// Allows plugins to adjust the plugin hub urls if they want
