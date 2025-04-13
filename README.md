@@ -12,6 +12,25 @@ Random project I made to run my own custom or modified external plugins on the o
 - Change mainClass to `ca.arnah.runelite.LauncherHijack`
 - Run RuneLite normally.
 
+```
+{
+  "classPath": [
+    "Near-Reality.jar",
+    "RuneLiteHijack.jar"
+  ],
+  "mainClass": "ca.arnah.runelite.LauncherHijack",
+  "vmArgs": [
+    "-XX:+DisableAttachMechanism",
+    "-Drunelite.launcher.nojvm\u003dtrue",
+    "-Drunelite.launcher.blacklistedDlls\u003dRTSSHooks.dll,RTSSHooks64.dll,NahimicOSD.dll,NahimicMSIOSD.dll,Nahimic2OSD.dll,Nahimic2DevProps.dll,k_fps32.dll,k_fps64.dll,SS2DevProps.dll,SS2OSD.dll,GTIII-OSD64-GL.dll,GTIII-OSD64-VK.dll,GTIII-OSD64.dll",
+    "-Xmx768m",
+    "-Xss2m",
+    "-XX:CompileThreshold\u003d1500",
+    "-XX:ErrorFile\u003dC:\\Users\\basti\\.osnr\\logs\\jvm_crash_pid_%p.log"
+  ]
+}
+```
+
 ![example](https://im.arnah.ca/3cB8zf5ZaE.png)
 
 If properly done, you should see "RuneLiteHijack Plugin Hub" or a "RuneLiteHijack" plugin in plugin configuration
