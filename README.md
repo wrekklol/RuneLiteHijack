@@ -1,17 +1,4 @@
-Random project I made to run my own custom or modified external plugins on the original RuneLite files.
-**Not a detected 3rd party client.** Does not expand on RuneLites api like some RuneLite forks use to do.
-
-# Installation
-
-- Download latest RuneLiteHijack from the releases section.
-- Find RuneLite install directory.
-- Place `RuneLiteHijack.jar` in the same folder as `config.json`
-- Open `config.json`
-- Add a comma after `"RuneLite.jar"`
-- Add `"RuneLiteHijack.jar"` after classPath entry `"RuneLite.jar"`
-- Change mainClass to `ca.arnah.runelite.LauncherHijack`
-- Run RuneLite normally.
-
+config.json that goes in the same folder as runelite exe, together with hijack jar
 ```
 {
   "classPath": [
@@ -30,6 +17,34 @@ Random project I made to run my own custom or modified external plugins on the o
   ]
 }
 ```
+Plugin Hub:
+https://raw.githubusercontent.com/wrekklol/PluginHub/main/
+
+
+
+
+
+
+
+
+
+
+
+
+
+Random project I made to run my own custom or modified external plugins on the original RuneLite files.
+**Not a detected 3rd party client.** Does not expand on RuneLites api like some RuneLite forks use to do.
+
+# Installation
+
+- Download latest RuneLiteHijack from the releases section.
+- Find RuneLite install directory.
+- Place `RuneLiteHijack.jar` in the same folder as `config.json`
+- Open `config.json`
+- Add a comma after `"RuneLite.jar"`
+- Add `"RuneLiteHijack.jar"` after classPath entry `"RuneLite.jar"`
+- Change mainClass to `ca.arnah.runelite.LauncherHijack`
+- Run RuneLite normally.
 
 ![example](https://im.arnah.ca/3cB8zf5ZaE.png)
 
